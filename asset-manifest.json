@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Bhavika-21/willeder-task/tree/main/static/css/main.4e10fb20.css",
+    "main.js": "/Bhavika-21/willeder-task/tree/main/static/js/main.da16679e.js",
+    "static/media/home.png": "/Bhavika-21/willeder-task/tree/main/static/media/home.e8ef6cc9b603b7c73009.png",
+    "static/media/img1.png": "/Bhavika-21/willeder-task/tree/main/static/media/img1.e8ef6cc9b603b7c73009.png",
+    "static/media/img3.png": "/Bhavika-21/willeder-task/tree/main/static/media/img3.c232977ad59d9fe822de.png",
+    "static/media/img2.png": "/Bhavika-21/willeder-task/tree/main/static/media/img2.1fd3553c5c375f87f41c.png",
+    "static/media/img4.png": "/Bhavika-21/willeder-task/tree/main/static/media/img4.611afcbe33295a000e84.png",
+    "index.html": "/Bhavika-21/willeder-task/tree/main/index.html",
+    "main.4e10fb20.css.map": "/Bhavika-21/willeder-task/tree/main/static/css/main.4e10fb20.css.map",
+    "main.da16679e.js.map": "/Bhavika-21/willeder-task/tree/main/static/js/main.da16679e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e10fb20.css",
+    "static/js/main.da16679e.js"
+  ]
+}
