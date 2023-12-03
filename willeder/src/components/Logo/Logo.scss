@@ -1,70 +1,95 @@
+// Import the index.scss file
 @import '../../index.scss';
 
+// Create a container for the logo
 .logo{
+    // Set the margin for the logo container
     margin: 200px 0;
+    // Display the container as a flex box
     display: flex;
+    // Justify the content to the center
     justify-content: center;
+    // Align the items to the center
     align-items: center;
 }
-.logo__square {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border: 2px solid #6587FF;
-    overflow: hidden;
-    animation: logoAnimation 4s ease-in-out infinite;
-  }
-  .top,
-  .left,
-  .right,
-  .bottom {
-    position: absolute;
-    height: calc(100% / 1.414);
-    width: calc(100% / 1.414);
-    top: 50%;
-    left: 50%;
-    transform-origin: 0% 0%;
-  }
-  .right {
-    transform: rotate(-45deg);
-    background-color: #E9FF60;
-  }
-  .bottom {
-    transform: rotate(45deg);
-    background-color: #FF5252;
-  }
-  .top {
-    transform: rotate(-135deg);
-    background-color: #8BFF54;
-  }
-  .left {
-    transform: rotate(135deg);
-    background-color: #6587FF;
-  }
 
+// Create the logo animation
 @keyframes logoAnimation {
     0%{
+        // Rotate the square by 0 degrees and scale it by 1
         transform: rotate(0deg) scale(1);
     }
     50%{
+        // Rotate the square by 360 degrees and scale it by 1.5
         transform: rotate(360deg) scale(1.5);
     }
     100%{
+        // Rotate the square by 0 degrees and scale it by 1
         transform: rotate(0deg) scale(1);
     }
 }
 
-// ---------------media queries----------
+// Create the logo square
+.logo__square {
+    // Position the square relative to its parent container
+    position: relative;
+    // Set the height and width of the square
+    height: 150px;
+    width: 150px;
+    // Set the border of the square
+    border: 2px solid #6587FF;
+    // Hide any overflowing content
+    overflow: hidden;
+    // Apply the logo animation to the square
+    animation: logoAnimation 4s ease-in-out infinite;
+ }
+
+// Create the square segments
+.top,
+.left,
+.right,
+.bottom {
+    // Position the segments absolutely within the square
+    position: absolute;
+    // Set the height and width of the segments
+    height: calc(100% / 1.414);
+    width: calc(100% / 1.414);
+    // Position the segments in the center of the square
+    top: 50%;
+    left: 50%;
+    // Set the transform origin of the segments
+    transform-origin: 0% 0%;
+ }
+
+// Set the rotation and color of the square segments
+.right {
+    transform: rotate(-45deg);
+    background-color: #E9FF60;
+}
+.bottom {
+    transform: rotate(45deg);
+    background-color: #FF5252;
+}
+.top {
+    transform: rotate(-135deg);
+    background-color: #8BFF54;
+}
+.left {
+    transform: rotate(135deg);
+    background-color: #6587FF;
+}
+
+// Define media queries for responsive design
 @media screen and (min-width: 1400px){  
 }
 @media screen and (max-width: 1400px){
-  .logo{
+ .logo{
     margin: 100px 0;
-  }
-  .logo__square{
+ }
+ .logo__square{
     width: 120px;
     height: 120px;
-  }
+ }
 }
 @media screen and (max-width: 1200px){
 }

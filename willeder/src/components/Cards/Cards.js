@@ -1,8 +1,13 @@
+// Import necessary modules
 import React from 'react'
+
+// Import CSS file
 import './Cards.scss'
 
+// Define the Cards component
 const Cards = () => {
-  return (
+ // Return JSX to render the Cards component
+ return (
     <div className='cards__wrapper' id='page1'>
       <div className="column1"></div>
 
@@ -38,7 +43,8 @@ const Cards = () => {
         </div>
       </div>
     </div>
-  )
+ )
 }
 
+// Export the Cards component for use in other modules
 export default Cards

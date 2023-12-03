@@ -1,6 +1,7 @@
 @import '../../index.scss';
 
 .footer{
+    // set the background color, padding, display mode, justify-content, align-items, and flex-direction for the footer
     background: #5D6273;
     padding: 80px 250px;
     display: flex;
@@ -11,27 +12,33 @@
 }
 
 .footer__footerLinks{
+    // apply the p__NotoSans-content mixin and set flex direction to center
     @include p__NotoSans-content;
     @include flex__center;
     letter-spacing: 4.8px;
     width: 100%;   
+    
     p{
+        // add padding to the paragraph element
         padding: 0 50px;
     }     
 }
 
 .footer__line{
+    // create a line to separate the links from the icons and the footer stamp
     border-bottom:3px solid rgb(255, 255, 255);
     width: 100%;
     margin: 56px 0 24px;
 }
 
 .footer__icons{
+    // apply the flex__center mixin to center the icons
     @include flex__center;
     width: 100%;
 }
 
 .icon{
+    // set the font size, color, background color, padding, border-radius, and margin for the icon element
     font-size: 1.85rem;
     color: #5D6273;
     background-color: white;
@@ -41,6 +48,7 @@
 }
 
 .footer__stamp{
+    // apply the p__NotoSans-content mixin and set the font size, font weight, letter-spacing, and color for the footer stamp
     @include p__NotoSans-content;
     margin-top: 56px;
     font-size: 12px;
@@ -53,18 +61,24 @@
 
 @media screen and (min-width: 1400px){
 }
+
 @media screen and (max-width: 1400px){
     .footer{
+        // decrease the padding for smaller screens
         padding: 30px 200px;
     }
     .footer__line{
+        // adjust the margin for smaller screens
         margin: 46px 0 24px;
     }
 }
+
 @media screen and (max-width: 1200px){
 }
+
 @media screen and (max-width: 992px){
     .footer{
+        // further decrease the padding for smaller screens
         padding: 30px 60px;
     }
     .footer__footerLinks{
@@ -77,13 +91,17 @@
         font-size: 1.3rem;
     }
 }
+
 @media screen and (max-width: 768px){
     .footer__footerLinks{
+        // change the flex direction to column for smaller screens
         flex-direction: column;
     }
 }
+
 @media screen and (max-width: 576px){
     .icon{
+        // decrease the margin for smaller screens
         margin: 0 15px;
     }
 }

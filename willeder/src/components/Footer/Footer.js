@@ -1,18 +1,25 @@
-import React from 'react'
+// Import necessary libraries and components
+import React from 'react';
 import './Footer.scss';
 import { FaTwitter, FaFacebookF, FaInstagram, FaMusic } from 'react-icons/fa';
+
+// Footer component definition
 const Footer = () => {
-  return (
+ // Render JSX code
+ return (
     <div className='footer'>
 
+      {/* Navigation links */}
       <div className="footer__footerLinks">
         <p>Home</p>
         <p>Page 1</p>
         <p>Page 2</p>
       </div>
 
+      {/* Divider line */}
       <hr className='footer__line'/>
 
+      {/* Social media icons */}
       <div className="footer__icons">
         <div className='icon'><FaFacebookF/></div>
         <div className='icon'><FaTwitter/></div>
@@ -20,12 +27,14 @@ const Footer = () => {
         <div className='icon'><FaMusic/></div>
       </div>
 
+      {/* Copyright statement */}
       <p className="footer__stamp">
         &copy; Logo, Inc.e
       </p>
 
     </div>
-  )
+ )
 }
 
-export default Footer
+// Export Footer component for use in other modules
+export default Footer;
