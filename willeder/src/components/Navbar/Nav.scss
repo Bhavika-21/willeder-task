@@ -1,0 +1,151 @@
+@import '../../index.scss';
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 80px;
+    height: 64px;
+    position: relative;
+}
+
+.nav__logo{
+    text-align: center;
+    display: flex;
+}
+
+.nav__logo_txt{
+    @include p__Revalia-logo_txt;
+    color: #000;
+    text-align: center;
+}
+
+.nav__Link{
+    @include flex__center;  
+    @include p__NotoSans-content;
+    font-size: 1rem;
+    justify-content: space-between;
+    width: 30%;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+.nav__carousel{
+    visibility: hidden;
+    cursor: pointer;
+}
+
+// overlay start
+
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+    position: absolute;
+    inset: 0;
+}
+
+.overlay{
+    @include flex__center;
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+    background-color: rgba($color: #e3dce6, $alpha: 1);
+    flex-direction: column;
+    animation: slide 0.5s linear;
+}
+
+@keyframes slide{
+    0%   {height: 0vh;}
+    100% {height: 100vh;}
+}
+
+.overlay__close{
+    position: absolute;
+    top: -6px;
+    right: 12px;
+    cursor: pointer;
+    color: $primary-color;
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+.overlay__links{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+
+    a{
+        @include p__NotoSans-content;
+        color: rgb(0, 0, 0);
+        padding: 20px 0;
+        cursor: pointer;
+        text-decoration: none;
+        letter-spacing: 0.1rem;
+
+    }
+}
+// overlay end
+
+// ---------------media queries----------
+
+@media screen and (min-width: 1400px){
+    
+}
+@media screen and (max-width: 1400px){
+    .nav{
+        padding: 0 40px;
+        height: 50px;
+    }
+
+    .nav__logo svg{
+        width: 35px;
+        height: 35px;
+    }
+    .nav__logo_txt{
+        font-size: 1.5rem;
+        letter-spacing: 0.6rem;
+    }
+
+    .nav__Link{
+        width: 40%;
+        p{
+            font-size: 0.8rem;
+        }
+    }
+}
+@media screen and (max-width: 1200px){
+}
+@media screen and (max-width: 992px){
+    .nav{
+        padding: 0 30px;
+
+        .nav__logo svg{
+            width: 29.5px;
+            height: 29.5px;
+        }
+        .nav__carousel{
+            visibility: visible;
+        }
+        .nav__logo_txt{
+            font-size: 1.25rem;
+            letter-spacing: 0.4rem;
+        }
+    }
+    .nav__Link {
+        display:none;
+    }   
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 576px){
+}

@@ -1,0 +1,89 @@
+@import '../../index.scss';
+
+.footer{
+    background: #5D6273;
+    padding: 80px 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.footer__footerLinks{
+    @include p__NotoSans-content;
+    @include flex__center;
+    letter-spacing: 4.8px;
+    width: 100%;   
+    p{
+        padding: 0 50px;
+    }     
+}
+
+.footer__line{
+    border-bottom:3px solid rgb(255, 255, 255);
+    width: 100%;
+    margin: 56px 0 24px;
+}
+
+.footer__icons{
+    @include flex__center;
+    width: 100%;
+}
+
+.icon{
+    font-size: 1.85rem;
+    color: #5D6273;
+    background-color: white;
+    padding: 10px 10px 5px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.footer__stamp{
+    @include p__NotoSans-content;
+    margin-top: 56px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+// ---------------media queries----------
+
+@media screen and (min-width: 1400px){
+}
+@media screen and (max-width: 1400px){
+    .footer{
+        padding: 30px 200px;
+    }
+    .footer__line{
+        margin: 46px 0 24px;
+    }
+}
+@media screen and (max-width: 1200px){
+}
+@media screen and (max-width: 992px){
+    .footer{
+        padding: 30px 60px;
+    }
+    .footer__footerLinks{
+        font-size: 1rem;
+        p{
+            margin: 10px 0;
+        }   
+    }
+    .icon{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .footer__footerLinks{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 576px){
+    .icon{
+        margin: 0 15px;
+    }
+}

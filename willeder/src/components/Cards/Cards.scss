@@ -1,0 +1,158 @@
+@import '../../index.scss';
+
+.cards__wrapper{
+    @include flex__center;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 100px 0;
+    position: relative;
+}
+
+.column1{
+    position: absolute;
+    width: 280px;
+    inset: 0;
+    background-color: $primary-color;
+    margin: auto;
+    z-index: 0;
+}
+
+.cards__heading{
+    text-align: center;
+    z-index: 1;
+    color: white;
+
+    h1{
+        @include p__NotoSans-content;
+        font-size: 1.9rem;
+        letter-spacing: 0.75rem;
+    }
+    h2{
+        @include p__NotoSans-content;
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;
+    }
+}
+
+.cards{
+    @include flex__center;
+    text-align: center;
+    margin-top: 64px;
+    color: white;
+}
+.card1, .card2, .card3{
+    @include flex__center;
+    position: relative;
+    height: 600px;
+    padding: 0px 70px;
+
+    &.card1{ background: url('../../images/img1.png') center/cover no-repeat; }
+    &.card2{ background: url('../../images/img2.png') center/cover no-repeat; }
+    &.card3{ background: url('../../images/img3.png') center/cover no-repeat; }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(0,0,0,0.5);
+    }
+}
+
+.card{
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__no{
+    @include p__NotoSans-content;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+.card__heading{
+    @include p__NotoSans-heading;
+    line-height: 2rem; 
+    letter-spacing: 0.6rem;
+    margin: 40px 0;
+}
+.card__content{
+    @include p__NotoSans-heading;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 150%; 
+    letter-spacing: 1px;
+}
+
+// ---------------media queries----------
+
+@media screen and (min-width: 1400px){
+}
+@media screen and (max-width: 1400px){
+    .cards__wrapper{
+        padding: 130px 0;
+    }
+    .card1, .card2, .card3{
+        padding: 0 35px;
+        height: 400px;
+    }
+    .card__heading{
+        font-size: 1.3rem;
+    }
+    .card__content{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 1200px){
+}
+@media screen and (max-width: 992px){
+    .cards__wrapper{
+        padding: 80px 0;
+    }
+    .column1{
+        width: 100px;
+        background: rgba(106, 69, 255, 0.24);
+    }
+    .cards__heading > h1{
+        color: $primary-color;
+        font-weight: 600px;
+    }
+    .cards__heading > h2{
+        color: #000000;
+        font-weight: 600px;
+    }
+    .card1, .card2, .card3{
+        padding: 0 35px;
+        height: 340px;
+        margin: 12px 12px;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .card__no{
+        display: none;
+    }
+    .card__heading{
+        font-size: 1.25rem;
+    }
+    .card__content{
+        font-size: 0.85rem;
+    }
+}
+@media screen and (max-width: 768px){
+
+    .column1{
+        width: 40px;
+    }
+    .card1, .card2, .card3{
+        padding: 0 35px;
+        height: 340px;
+        margin: 12px 12px;
+    }
+}
+@media screen and (max-width: 576px){
+}

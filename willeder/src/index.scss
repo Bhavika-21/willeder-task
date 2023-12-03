@@ -1,0 +1,43 @@
+
+$primary-color: #6A45FF;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bg-color: rgb(120, 163, 242);
+
+@mixin flex__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin p__NotoSans-heading {
+    font-family: Noto Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; 
+    letter-spacing: 0.6rem;
+}
+
+@mixin p__NotoSans-content {
+    font-family: Noto Sans;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; 
+    letter-spacing: 0.3rem;
+}
+@mixin p__Revalia-logo_txt {
+    font-family: Revalia;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    letter-spacing: 0.6rem;
+    padding: 0 0.6rem;
+}
+

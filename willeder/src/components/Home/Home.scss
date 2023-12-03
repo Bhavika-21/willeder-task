@@ -1,0 +1,130 @@
+@import '../../index.scss';
+
+.home{
+    @include flex__center;
+    align-items: flex-end;
+    position: relative;
+    background: url('../../images/home.png') center/cover no-repeat;
+    width: 100%;
+    height: 89vh;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+    }
+}
+
+.home__content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.home__content-logo{
+    @include flex__center;
+    text-align: center;
+}
+.home__content-logo_txt{
+    @include p__Revalia-logo_txt;
+    font-size: 5rem;
+    line-height: 171%; 
+    letter-spacing: 2.5rem;
+    padding: 0 20px;
+}
+
+.p_heading{
+    @include p__NotoSans-heading;
+    background-color: $primary-color;
+    letter-spacing: 0.6rem;
+    width: 100%;
+    margin: 64px 0 29px;
+}
+
+.p_content{
+    @include p__NotoSans-content;
+    font-weight: 400;
+    padding: 0 160px;
+}
+.home__scroll{
+    @include p__NotoSans-content;
+    margin-top: 50px;
+}
+.vertical__line{
+    height: 2.5rem;
+    background-color: white;
+    width: 1px;
+    margin: auto;
+
+}
+// ---------------media queries----------
+
+@media screen and (min-width: 1400px){
+}
+@media screen and (max-width: 1400px){  
+    .home{
+        align-items: flex-end;
+    }
+    .home__content-logo svg{
+        width: 100px;
+        height: 100px;
+    }
+
+    .home__content-logo_txt{
+        font-size: 3rem;
+        letter-spacing: 2rem;
+    }
+    .p_heading{
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;
+        margin: 50px 0 32px;
+    }
+    .p_content{
+        font-size: 1rem ;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+    }
+}
+@media screen and (max-width: 1200px){
+}
+
+@media screen and (max-width: 992px){
+    .home{
+    }
+    .home__content-logo svg{
+        width: 69px;
+        height: 69px;
+    }
+
+    .home__content-logo_txt{
+        font-size: 2rem;
+        letter-spacing: 1rem;
+    }
+    .p_heading{
+        font-size: 1.25rem;
+        letter-spacing: 0.35px;
+        background-color: transparent;
+        margin: 30px 0 32px;
+    }
+    .p_content{
+        font-size: 0.9rem ;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.15rem;
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 576px){
+}
+

@@ -1,0 +1,83 @@
+@import '../../index.scss';
+
+.logo{
+    margin: 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo__square {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border: 2px solid #6587FF;
+    overflow: hidden;
+    animation: logoAnimation 4s ease-in-out infinite;
+  }
+  .top,
+  .left,
+  .right,
+  .bottom {
+    position: absolute;
+    height: calc(100% / 1.414);
+    width: calc(100% / 1.414);
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+  }
+  .right {
+    transform: rotate(-45deg);
+    background-color: #E9FF60;
+  }
+  .bottom {
+    transform: rotate(45deg);
+    background-color: #FF5252;
+  }
+  .top {
+    transform: rotate(-135deg);
+    background-color: #8BFF54;
+  }
+  .left {
+    transform: rotate(135deg);
+    background-color: #6587FF;
+  }
+
+@keyframes logoAnimation {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    50%{
+        transform: rotate(360deg) scale(1.5);
+    }
+    100%{
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+// ---------------media queries----------
+@media screen and (min-width: 1400px){  
+}
+@media screen and (max-width: 1400px){
+  .logo{
+    margin: 100px 0;
+  }
+  .logo__square{
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 1200px){
+}
+@media screen and (max-width: 992px){
+    .logo{
+      margin: 100px 0;
+    }
+    .logo__square{
+      width: 100px;
+      height: 100px;
+    }
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 576px){
+}
